@@ -97,6 +97,11 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+input[type="button"], input[type="reset"]{
+-webkit-appearance: none;
+  -moz-appearance:none;
+}
+
 label {
   display: inline-block;
   margin-bottom: 0.25rem;
