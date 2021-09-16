@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [My Solution](https://www.frontendmentor.io/solutions/frontend-mentor-tip-calculator-app-alba-g-XEMr478Fw)
 - Live Site URL: [Tip Calculator App](https://tipcalculatorapp-albagr.netlify.app/)
 
 ## My process
