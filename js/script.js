@@ -41,7 +41,7 @@ function checkPercentage() {
   var customPercentage = document
     .querySelector(".d-grid__item--custom")
     .value.toString();
-  tip_percentage = customPercentage;
+  tip_percentage = customPercentage.replace("%", "");
 
   calculatePercentage();
 }
