@@ -40,7 +40,7 @@ function activeButton(element) {
 function checkPercentage() {
   var customPercentage = document
     .querySelector(".d-grid__item--custom")
-    .value.replace("%", "");
+    .value.toString().replace("%", "");
   tip_percentage = customPercentage;
 
   calculatePercentage();
