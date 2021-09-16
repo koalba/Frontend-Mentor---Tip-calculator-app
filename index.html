@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="images/logo.svg" class="calc__logo" alt="Splitter Logo" />
+      <form class="calc" action="index.html" method="post">
+        <div class="calc__items">
+          <label for="bill">Bill</label>
+          <input
+            id="bill"
+            class="bill"
+            type="number"
+            name="bill"
+            value=""
+            placeholder="0"
+            min="0"
+          />
+          <label for="tip__percentage">Select Tip %</label>
+          <div class="tip__percentage d-grid" id="tip__percentage">
+            <input
+              class="d-grid__item d-grid__item--active"
+              type="button"
+              name="5_per"
+              value="5%"
+              onclick="activeButton(this)"
+            />
+            <input
+              class="d-grid__item"
+              type="button"
+              name="percentage"
+              value="10%"
+              onclick="activeButton(this)"
+            />
+            <input
+              class="d-grid__item"
+              type="button"
+              name="percentage"
+              value="15%"
+              onclick="activeButton(this)"
+            />
+            <input
+              class="d-grid__item"
+              type="button"
+              name="percentage"
+              value="25%"
+              onclick="activeButton(this)"
+            />
+            <input
+              class="d-grid__item"
+              type="button"
+              name="percentage"
+              value="50%"
+              onclick="activeButton(this)"
+            />
+            <input
+              class="d-grid__item d-grid__item--custom"
+              type="number"
+              name="custom_per"
+              value=""
+              placeholder="Custom"
+              onclick="activeButton(this)"
+            />
+          </div>
+          <label for="people"
+            >Number of People <span class="warning">Can't be 0</span></label
+          >
+          <input
+            id="people"
+            class="people"
+            type="number"
+            name="people"
+            value="1"
+            placeholder="1"
+            min="0"
+          />
+        </div>
+
+        <div class="calc__result">
+          <div class="d-flex">
+            <label class="label--light" for="final-tip"
+              >Tip Amount <br />
+              <span class="label__detail">/ person</span>
+            </label>
+            <output
+              id="final-tip"
+              class="final-text"
+              name="final-tip"
+              for="bill percentage people"
+              >$0.00</output
+            >
+          </div>
+          <div class="d-flex">
+            <label class="label--light" for="final-total"
+              >Total <br />
+              <span class="label__detail">/ person</span>
+            </label>
+            <output
+              id="final-total"
+              class="final-text"
+              name="final-total"
+              for="bill percentage people"
+              >$0.00</output
+            >
+          </div>
+          <input
+            class="reset"
+            type="reset"
+            value="RESET"
+            onclick="resetTotal()"
+          />
+        </div>
+      </form>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://koalba.netlify.app/">Alba García</a>.
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
