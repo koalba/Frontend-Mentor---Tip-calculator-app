@@ -16,7 +16,8 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -75,7 +76,8 @@ ul {
 input {
   font-family: var(--ff-main);
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 0.25em 0.5em;
   font-size: 20px;
   border-radius: 5px;
@@ -97,11 +99,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type="button"], input[type="reset"]{
--webkit-appearance: none;
-  -moz-appearance:none;
-}
-
 label {
   display: inline-block;
   margin-bottom: 0.25rem;
@@ -113,15 +110,23 @@ label:not(:first-of-type) {
 }
 
 .d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 1rem;
 }
 
 .d-grid {
   text-align: center;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 0.75em 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 0.75em;
 }
@@ -137,6 +142,14 @@ input[type="number"] {
   background-color: var(--lighter-cyan);
   color: var(--n-dark-cyan);
   text-align: right;
+}
+
+:-ms-input-placeholder {
+  color: var(--dark-cyan);
+}
+
+::-ms-input-placeholder {
+  color: var(--dark-cyan);
 }
 
 ::placeholder,
@@ -235,9 +248,13 @@ input[type="number"].people--wrong {
   .calc {
     max-width: 90%;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /* align-items: center; */
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 2rem;
     padding: 2.5rem;
     border-radius: 20px;
@@ -248,6 +265,7 @@ input[type="number"].people--wrong {
   }
 
   .d-grid {
+    -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -258,8 +276,13 @@ input[type="number"].people--wrong {
 
   .calc__result {
     padding: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   label:not(:first-of-type) {
