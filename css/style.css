@@ -83,6 +83,9 @@ input {
   border-radius: 5px;
   width: 100%;
   font-weight: var(--fw-bold);
+  -webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
 }
 
 input:focus {
